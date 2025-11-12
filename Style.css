@@ -1,0 +1,141 @@
+
+h1 {
+    font-size: 40px; 
+    color: white;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #facc15, #84cc16); 
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+a {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(to right, #84cc16, #facc15);
+    font-family: Verdana, sans-serif;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+b {
+  display: inline-block;
+  font-size: 1px;
+  color: transparent;
+
+  
+  background: linear-gradient(to right, #84cc16, #facc15);
+
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+ 
+  padding: 10px 20px;
+  margin: 10px 20px;
+  border-radius: 25px;
+}
+
+h2 {
+    font-size: 20px; 
+    
+    font-family: Verdana, sans-serif;
+    text-align: left;
+    background: linear-gradient(to right, #facc15, #84cc16);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 15px;
+    
+    
+}
+p {
+    font-size: 15px; 
+    
+    font-family: Verdana, sans-serif;
+    text-align: left;
+    background: linear-gradient(to right, #0a3f0a, #41400b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 15px;
+    
+}
+
+a:hover {
+    background: linear-gradient(to right, #65a30d, #eab308);
+    color: #fefce8;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   🎨 PALETTE & STYLES PRINCIPAUX — Synthèse du design global
+   Auteur : Tom DAUCH (1ère1) — Avril / Mai 2025
+   ============================================================
+            
+
+   🎨 PALETTE PRINCIPALE
+   ------------------------------------------------------------
+   Type d’élément                 | Couleur / Dégradé
+   ------------------------------------------------------------
+   Fond général                   : linear-gradient(135deg, #e0f2ff, #f0f9ff)
+   Titres principaux (h1)         : linear-gradient(to right, #facc15, #84cc16)
+   Sous-titres (h2)               : #1e40af (bleu foncé)
+   Sous-titres (h3)               : #10b981 (vert émeraude)
+   Sous-titres (h4)               : #dc2626 (rouge vif)
+   Texte principal                : #334155 (gris bleuté foncé)
+   Liens / Boutons                : linear-gradient(to right, #84cc16, #facc15)
+   Lien au survol                 : linear-gradient(to right, #65a30d, #eab308)
+   Footer principal               : #1e3a8a puis #50a808 (bleu nuit → vert vif)
+   Sections (contenu)             : rgba(255,255,255,0.75) + box-shadow doux
+   Popup cookies (fond)           : rgba(30, 41, 59, 0.85)
+   Bouton "accepter cookies"      : #10b981 (vert émeraude)
+   Bouton "refuser cookies"       : #ef4444 (rouge vif)
+   Bouton "personnaliser cookies" : linear-gradient(to right, #84cc16, #facc15)
+
+   🧱 PRINCIPAUX STYLES VISUELS
+   ------------------------------------------------------------
+   - Bords arrondis : border-radius de 15px à 25px
+   - Ombres portées : box-shadow 0 6–16px rgba(0,0,0,0.15–0.3)
+   - Transitions fluides : transition: all 0.3s ease
+   - Effet de survol : transform: translateY(-3px) ou scale(1.03)
+   - Typographie principale : Verdana, sans-serif
+   - Typographies secondaires :
+       * "Georgia", serif → Patinage Artistique
+       * "Arial", sans-serif → Bobsleigh
+   - Disposition : centrée, marges généreuses, responsive (≤ 600px)
+   - Animation : fadeIn (apparition du popup cookies)
+   - Icônes de liste :
+       * 🎿 Ski
+       * ⛸️ Patinage
+       * 🏁 Bobsleigh
+
+   🌗 MODES DE THÈME
+   ------------------------------------------------------------
+   Mode clair  → fond #f9f9f9, texte #111
+   Mode sombre → fond #111, texte #f9f9f9
+   ============================================================ */
