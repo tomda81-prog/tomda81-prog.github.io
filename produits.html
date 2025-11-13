@@ -3,13 +3,21 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
+<!--On définit le doctype et la langue-->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SellingCar — le site de vente de voiture !!</title>
     <link href="Style.css" rel="stylesheet" type="text/css">
 
+    <!--Definition style tableau-->
+
     <style>
+
+        
+        
         .tftable {
             font-size: 14px;
             color: #333333;
@@ -45,6 +53,7 @@
         }
 
         /* Section achat */
+
         .achat-container {
             margin: 40px auto;
             text-align: center;
@@ -61,6 +70,8 @@
             border-radius: 6px;
             border: 1px solid #ccc;
         }
+
+        
         button {
             background: linear-gradient(to right, #facc15, #84cc16);
             color: white;
@@ -84,12 +95,19 @@
     </style>
 </head>
 
+<!--Les bouton et leur animations-->
+
 <body>
 
     <h1>Produits</h1>
     <a href="Sellingcar.html">Accueil</a>
 
+    <!--On crée un lien vers la page d'accueil-->
+
     <table class="tftable" border="1">
+
+        <!--On crée Classe tableau-->
+
 <tr>
         <th>Marque</th>
         <th>Modèle 1</th>
@@ -201,6 +219,8 @@
         <td><a href="https://en.wikipedia.org/wiki/Dodge_Demon" target="_blank">Demon 170</a></td>
     </tr>
     </table>
+
+    <!--Definition tableau-->
     
     <div class="achat-container">
         <h2>Simuler un achat</h2>
@@ -233,6 +253,8 @@
         <p id="resultat"></p>
     </div>
 
+    <!--Definition achat-->
+
     <script>
         const couleurs = document.querySelectorAll('.couleur');
         const resultat = document.getElementById('resultat');
@@ -263,6 +285,8 @@
             resultat.textContent = `Vous avez sélectionné une ${modele} en couleur ${couleurChoisie}. (Achat fictif confirmé)`;
         });
     </script>
+
+    <!--Definition Script achat-->
 
 </body>
 </html>
