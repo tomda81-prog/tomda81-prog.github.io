@@ -1,3 +1,6 @@
+
+<!--Dauch Tom t**1-->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SellingCar — le site de vente de voiture !!</title>
     <link href="Style.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        
+
+    <style>
         .tftable {
             font-size: 14px;
             color: #333333;
@@ -30,9 +33,6 @@
             text-align: left;
             color: white;
         }
-        .tftable tr {
-            background-color: #e6e6e6;
-        }
         .tftable td {
             font-size: 14px;
             border-width: 1px;
@@ -43,19 +43,54 @@
         .tftable tr:hover {
             background-color: #ffffff;
         }
+
+        /* Section achat */
+        .achat-container {
+            margin: 40px auto;
+            text-align: center;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+        }
+        select, button {
+            margin: 10px;
+            padding: 8px 12px;
+            font-size: 14px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: linear-gradient(to right, #facc15, #84cc16);
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .couleur {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .couleur.active {
+            border: 2px solid #333;
+        }
     </style>
 </head>
+
 <body>
 
-    <script src="script.js"></script>
-
-
     <h1>Produits</h1>
-
-    <a href="Sellingcar.html">Acceuil</a>
+    <a href="Sellingcar.html">Accueil</a>
 
     <table class="tftable" border="1">
-    <tr>
+<tr>
         <th>Marque</th>
         <th>Modèle 1</th>
         <th>Modèle 2</th>
@@ -165,19 +200,73 @@
         <td><a href="https://en.wikipedia.org/wiki/Dodge_Challenger_SRT_Hellcat_Redeye" target="_blank">Redeye</a></td>
         <td><a href="https://en.wikipedia.org/wiki/Dodge_Demon" target="_blank">Demon 170</a></td>
     </tr>
-</table>
+    </table>
+    
+    <div class="achat-container">
+        <h2>Simuler un achat</h2>
+        <label for="modele">Choisissez un modèle :</label>
+        <select id="modele">
+            <option value="">-- Sélectionnez un modèle --</option>
+            <option>Toyota Corolla</option>
+            <option>Peugeot 208</option>
+            <option>Renault Clio</option>
+            <option>BMW Série 3</option>
+            <option>Mercedes Classe A</option>
+            <option>Audi A3</option>
+            <option>Volkswagen Golf</option>
+            <option>Ford Focus</option>
+            <option>Hyundai i30</option>
+            <option>Dodge Charger</option>
+        </select>
 
+        <h3>Choisissez la couleur :</h3>
 
+        <div id="palette">
+            <div class="couleur" style="background:red;" data-couleur="Rouge"></div>
+            <div class="couleur" style="background:blue;" data-couleur="Bleu"></div>
+            <div class="couleur" style="background:black;" data-couleur="Noir"></div>
+            <div class="couleur" style="background:silver;" data-couleur="Argent"></div>
+            <div class="couleur" style="background:green;" data-couleur="Vert"></div>
+        </div>
 
-    <!--
+        <button id="acheter">Acheter</button>
+        <p id="resultat"></p>
+    </div>
 
-        <a href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnIwZzJtaWw2dzd1d3d6bjRnaXduc2YzdmxrMDM1MDc3M290eXIyMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tyttpGWQ6DWsyWXp4Z2/giphy.gif">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnIwZzJtaWw2dzd1d3d6bjRnaXduc2YzdmxrMDM1MDc3M290eXIyMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tyttpGWQ6DWsyWXp4Z2/giphy.gif" alt="Animated GIF" style="max-width:100%;height:auto;border:0;">
-        </a>
+    <script>
+        const couleurs = document.querySelectorAll('.couleur');
+        const resultat = document.getElementById('resultat');
+        const select = document.getElementById('modele');
+        let couleurChoisie = null;
 
-    -->
+        couleurs.forEach(c => {
+            c.addEventListener('click', () => {
+                couleurs.forEach(c2 => c2.classList.remove('active'));
+                c.classList.add('active');
+                couleurChoisie = c.dataset.couleur;
+            });
+        });
+
+        document.getElementById('acheter').addEventListener('click', () => {
+            const modele = select.value;
+            if (!modele) {
+                resultat.textContent = "Veuillez sélectionner un modèle.";
+                resultat.style.color = "red";
+                return;
+            }
+            if (!couleurChoisie) {
+                resultat.textContent = "Veuillez choisir une couleur.";
+                resultat.style.color = "red";
+                return;
+            }
+            resultat.style.color = "green";
+            resultat.textContent = `Vous avez sélectionné une ${modele} en couleur ${couleurChoisie}. (Achat fictif confirmé)`;
+        });
+    </script>
 
 </body>
 </html>
+
+
 
 
